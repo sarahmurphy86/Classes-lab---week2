@@ -32,8 +32,11 @@ class TestStudent < MiniTest::Test
   def test_talks
     student = Student.new("Paul", 21)
     assert_equal(String, student.talks())
-
   end
 
+  def test_favourite_language
+    student = Student.new("Paul", 21)
+    assert_equal("I love Ruby",student.get_favourite_language("Ruby"))
+  end
 
 end
